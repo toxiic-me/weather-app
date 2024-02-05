@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Space+Grotesk&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <!-- navbar in header -->
+    <header>
+        <nav>
+        <!-- app logo -->
+        <h2 id="logo">
+            <i class="fa-solid fa-cloud-bolt"></i>
+            <span id="cityName">Weather</span>
+            <i class="fa-solid fa-cloud-bolt"></i>
+        </h2>
+        <!-- search bar -->
+        <div class="search-bar">
+            <!-- theme changer -->
+            <span id="changeTheme"><i class="fa-solid fa-sun"></i></span>
+            <!-- input and search button -->
+            <div class="searchItems">
+            <input id="searchInput" type="text" name="search">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+        </div>
+        <!-- toggle menu btn -->
+        <button id="toggleMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- link list -->
+        <ul id="links">
+            <li><a class="linkText" href="#">Home</a></li>
+            <li><a class="linkText" href="#">About</a></li>
+            <li><a class="linkText" href="#">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <!-- main container -->
+    <div id="innerBody" class="main-box">
+
+        <!-- show temp (max/min also) -->
+        <div class="temp">
+            <h2 id="temp"><span id="mainTemp">--</span>&deg;C</h2>
+            <p id="minMax">
+                <span>Min Temp: <span id="minTemp">--</span>&deg;C</span> | <span>Max Temp: <span id="maxTemp">--</span>&deg;C</span>            
+            </p></div>
+
+            <!-- humidity and windspeed -->
+            <div class="data-box">
+                <p><i class="fa-solid fa-water"></i> Humidity: <span id="humidity">--</span></p>
+                <p><i class="fa-solid fa-wind"></i> Wind Speed: <span id="windSpeed">--</span></p>
+            </div>
+
+            <!-- cloud and wind speed -->
+
+            <div class="data-box">
+                <p><i class="fa-solid fa-cloud-meatball"></i></i> Cloud Pact: <span id="cloudPact">--</span></p>
+                <p><i class="fa-solid fa-gauge-high"></i></i> Wind Degree: <span id="windDegree">--</span>&deg;</p>
+            </div>
+
+            <!-- time and date -->
+            <div class="data-box time">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+
+        </div>    
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
